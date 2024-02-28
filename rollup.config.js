@@ -3,7 +3,18 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 
-const packageJson = require("./package.json");
+
+import fs from 'fs';
+import path from 'path';
+
+
+// const packageJson = require("./package.json");
+// import packageJson from "./package.json" assert { type: "json" };
+// import json from '@rollup/plugin-json';
+
+const packageJsonPath = path.resolve('./package.json');
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+
 
 export default [
   {

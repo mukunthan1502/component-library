@@ -1,12 +1,12 @@
 {
   "name": "template-react-component-library",
-  "version": "1.0.0",
-  "description": "A simple template for a custom React component",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "React Component Library for S&S",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "rollup -c"
   },
-  "author": "",
+  "author": "Mukunthan",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
@@ -16,6 +16,13 @@
     "react": "^18.2.0",
     "rollup": "^4.12.0",
     "rollup-plugin-dts": "^6.1.0",
+    "tslib": "^2.6.2",
     "typescript": "^5.3.3"
-  }
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
 }
